@@ -54,6 +54,9 @@
     <Compile Include="Repositories\Power Devices\CurrentProbeRepository.cs" />
     <Compile Include="Repositories\Power Devices\PortableBatteryRepository.cs" />
     <Compile Include="Repositories\Power Devices\VoltageProbeRepository.cs" />
+    <Compile Include="Repositories\Video and Monitor Devices\DesktopMonitorRepository.cs" />
+    <Compile Include="Repositories\Video and Monitor Devices\DisplayControllerConfigurationRepository.cs" />
+    <Compile Include="Repositories\Video and Monitor Devices\VideoControllerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SystemSpecs.Core\SystemSpecs.Core.csproj">
