@@ -24,7 +24,7 @@ namespace SystemSpecs.Core.Enums
         [Description("VGA")]
         VGA,
 
-        [Description("SVGA"]
+        [Description("SVGA")]
         SVGA,
 
         [Description("MDA")]
