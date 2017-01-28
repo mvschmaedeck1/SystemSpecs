@@ -9,10 +9,10 @@
       - [X] Mass Storage Classes
       - [ ] Motherboard, Controller, and Port Classes
       - [X] Networking Device Classes
-      - [ ] Power Classes
+      - [X] Power Classes
       - [ ] Printing Classes
       - [ ] Telephony Classes
-      - [ ] Video and Monitor Classes
+      - [X] Video and Monitor Classes
    * Installed Applications Classes
    * Operating System Classes
       - [ ] COM
