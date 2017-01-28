@@ -42,10 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
+    <Compile Include="FanRepository.cs" />
+    <Compile Include="HeatPipeRepository.cs" />
     <Compile Include="KeyboardRepository.cs" />
     <Compile Include="NetworkAdaptersRepository.cs" />
     <Compile Include="PointingDeviceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefrigerationRepository.cs" />
+    <Compile Include="TemperatureProbeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SystemSpecs.Core\SystemSpecs.Core.csproj">
