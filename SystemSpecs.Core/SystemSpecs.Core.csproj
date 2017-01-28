@@ -63,13 +63,13 @@
     <Compile Include="Enums\StatusInfo.cs" />
     <Compile Include="Enums\TcpipNetbiosOptions.cs" />
     <Compile Include="Hardware\BaseHardware.cs" />
-    <Compile Include="Hardware\FAN.cs" />
-    <Compile Include="Hardware\HeatPipe.cs" />
-    <Compile Include="Hardware\Keyboard.cs" />
-    <Compile Include="Hardware\NetworkAdapter.cs" />
-    <Compile Include="Hardware\PointingDevice.cs" />
-    <Compile Include="Hardware\Refrigeration.cs" />
-    <Compile Include="Hardware\TemperatureProbe.cs" />
+    <Compile Include="Hardware\Cooling Devices\FAN.cs" />
+    <Compile Include="Hardware\Cooling Devices\HeatPipe.cs" />
+    <Compile Include="Hardware\Input Devices\Keyboard.cs" />
+    <Compile Include="Hardware\Network Devices\NetworkAdapter.cs" />
+    <Compile Include="Hardware\Input Devices\PointingDevice.cs" />
+    <Compile Include="Hardware\Cooling Devices\Refrigeration.cs" />
+    <Compile Include="Hardware\Cooling Devices\TemperatureProbe.cs" />
     <Compile Include="Interface\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

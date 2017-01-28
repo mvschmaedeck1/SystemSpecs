@@ -1,5 +1,5 @@
 ﻿using System.Management;
-using SystemSpecs.Core.Hardware;
+using SystemSpecs.Core.Hardware.InputDevices;
 
 namespace SystemSpecs.Infrastructure.Repositories.InputDevices
 {

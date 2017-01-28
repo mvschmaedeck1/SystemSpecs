@@ -2,7 +2,7 @@
 using System.Management;
 using SystemSpecs.Core.Config;
 
-namespace SystemSpecs.Core.Hardware
+namespace SystemSpecs.Core.Hardware.InputDevices
 {
     public class PointingDevice : BaseHardware
     {
