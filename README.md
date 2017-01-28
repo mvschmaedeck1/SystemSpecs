@@ -6,7 +6,7 @@
    * Computer System Hardware Classes:
       - [X] Cooling Device Classes 
       - [X] Input Device Classes
-      - [ ] Mass Storage Classes
+      - [X] Mass Storage Classes
       - [ ] Motherboard, Controller, and Port Classes
       - [X] Networking Device Classes
       - [ ] Power Classes
