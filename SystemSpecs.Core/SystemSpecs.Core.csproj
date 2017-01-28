@@ -66,7 +66,7 @@
     <Compile Include="Hardware\Cooling Devices\FAN.cs" />
     <Compile Include="Hardware\Cooling Devices\HeatPipe.cs" />
     <Compile Include="Hardware\Input Devices\Keyboard.cs" />
-    <Compile Include="Hardware\Network Devices\NetworkAdapter.cs" />
+    <Compile Include="Hardware\Networking Devices\NetworkAdapter.cs" />
     <Compile Include="Hardware\Input Devices\PointingDevice.cs" />
     <Compile Include="Hardware\Cooling Devices\Refrigeration.cs" />
     <Compile Include="Hardware\Cooling Devices\TemperatureProbe.cs" />

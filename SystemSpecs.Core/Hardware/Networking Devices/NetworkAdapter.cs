@@ -2,7 +2,7 @@
 using System.Management;
 using SystemSpecs.Core.Config;
 
-namespace SystemSpecs.Core.Hardware.NetworkDevices
+namespace SystemSpecs.Core.Hardware.NetworkingDevices
 {
     public class NetworkAdapter : BaseHardware
     {

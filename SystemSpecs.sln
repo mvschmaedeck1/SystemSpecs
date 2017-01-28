@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemSpecs.Core", "SystemS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Infrastructure", "3. Infrastructure", "{4F3433A3-00B0-4224-B421-79F4B14AA4B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemSpecs.Infrastructure", "SystemSpecs.Repository\SystemSpecs.Infrastructure.csproj", "{0361B922-C7D9-4DA0-A3C5-AE2811FB05F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemSpecs.Infrastructure", "SystemSpecs.Infrastructure\SystemSpecs.Infrastructure.csproj", "{0361B922-C7D9-4DA0-A3C5-AE2811FB05F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

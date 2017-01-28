@@ -154,10 +154,6 @@
       <Project>{8617037f-a752-4e34-9353-9ca01932259e}</Project>
       <Name>SystemSpecs.Helpers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SystemSpecs.Repository\SystemSpecs.Infrastructure.csproj">
-      <Project>{0361b922-c7d9-4da0-a3c5-ae2811fb05f2}</Project>
-      <Name>SystemSpecs.Infrastructure</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
