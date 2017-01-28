@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\Power Devices\BatteryRepository.cs" />
     <Compile Include="Repositories\Cooling Devices\FanRepository.cs" />
     <Compile Include="Repositories\Cooling Devices\HeatPipeRepository.cs" />
     <Compile Include="Repositories\Input Devices\KeyboardRepository.cs" />
@@ -50,6 +51,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Cooling Devices\RefrigerationRepository.cs" />
     <Compile Include="Repositories\Cooling Devices\TemperatureProbeRepository.cs" />
+    <Compile Include="Repositories\Power Devices\CurrentProbeRepository.cs" />
+    <Compile Include="Repositories\Power Devices\PortableBatteryRepository.cs" />
+    <Compile Include="Repositories\Power Devices\VoltageProbeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SystemSpecs.Core\SystemSpecs.Core.csproj">

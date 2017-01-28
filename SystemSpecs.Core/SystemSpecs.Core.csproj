@@ -46,9 +46,12 @@
     <Compile Include="Config\InputDevicesConfig.cs" />
     <Compile Include="Config\MassStorageDevicesConfig.cs" />
     <Compile Include="Config\NetworkingDevicesConfig.cs" />
+    <Compile Include="Config\PowerDevicesConfig.cs" />
     <Compile Include="Enums\AdapterTypeID.cs" />
     <Compile Include="Enums\AdminPasswordStatus.cs" />
+    <Compile Include="Enums\BatteryStatus.cs" />
     <Compile Include="Enums\Capabilities.cs" />
+    <Compile Include="Enums\Chemistry.cs" />
     <Compile Include="Enums\ConfigManagerErrorCode.cs" />
     <Compile Include="Enums\DeviceInterface.cs" />
     <Compile Include="Enums\FileSystemFlagsEx.cs" />
