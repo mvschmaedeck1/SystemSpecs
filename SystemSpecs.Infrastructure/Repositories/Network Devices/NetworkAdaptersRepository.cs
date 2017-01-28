@@ -1,5 +1,5 @@
 ﻿using System.Management;
-using SystemSpecs.Core.Hardware.NetworkingDevices;
+using SystemSpecs.Core.Hardware;
 
 namespace SystemSpecs.Infrastructure.Repositories.NetworkDevices
 {

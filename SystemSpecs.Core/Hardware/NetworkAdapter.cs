@@ -2,7 +2,7 @@
 using System.Management;
 using SystemSpecs.Core.Config;
 
-namespace SystemSpecs.Core.Hardware.NetworkingDevices
+namespace SystemSpecs.Core.Hardware
 {
     public class NetworkAdapter : BaseHardware
     {
@@ -20,11 +20,11 @@ namespace SystemSpecs.Core.Hardware.NetworkingDevices
             Type type;
             object value = null;
 
-            if (TryGetPropertyType(propertyName, NetworkingDevicesConfig.DefaultPropertiesTypesForAdapter, out type))
+            if (TryGetPropertyType(propertyName, NetworkingDevicesConfig.AdapterPropertyTypes, out type))
             {
                 value = _AdapterObject[propertyName];
             }
-            else if(TryGetPropertyType(propertyName, NetworkingDevicesConfig.DefaultPropertiesTypesForAdapterConfiguration, out type))
+            else if(TryGetPropertyType(propertyName, NetworkingDevicesConfig.AdapterConfigurationPropertyTypes, out type))
             {
                 value = _AdapterConfigurationObject[propertyName];
             }

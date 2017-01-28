@@ -6,7 +6,7 @@ namespace SystemSpecs.Core.Config
 {
     public static class NetworkingDevicesConfig
     {
-        public static Dictionary<string, Type> DefaultPropertiesTypesForAdapter = new Dictionary<string, Type>
+        public static Dictionary<string, Type> AdapterPropertyTypes = new Dictionary<string, Type>
         {
             { "AdapterType", typeof(string)},
             { "AdapterTypeID", typeof(AdapterTypeID)},
@@ -50,7 +50,7 @@ namespace SystemSpecs.Core.Config
             { "TimeOfLastReset", typeof(string)}, // datetime
         };
 
-        public static Dictionary<string, Type> DefaultPropertiesTypesForAdapterConfiguration = new Dictionary<string, Type>
+        public static Dictionary<string, Type> AdapterConfigurationPropertyTypes = new Dictionary<string, Type>
         {
             { "Caption", typeof(string)},
             { "Description", typeof(string)},
