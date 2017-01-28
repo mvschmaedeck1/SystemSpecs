@@ -2,7 +2,7 @@
 using System.Linq;
 using SystemSpecs.Core.Interface;
 
-namespace SystemSpecs.Repository
+namespace SystemSpecs.Infrastructure.Repositories
 {
     public abstract class BaseRepository<T> : IRepository<T>
     {

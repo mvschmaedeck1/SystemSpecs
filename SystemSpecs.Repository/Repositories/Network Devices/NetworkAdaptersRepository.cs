@@ -1,8 +1,7 @@
 ﻿using System.Management;
 using SystemSpecs.Core.Hardware;
-using SystemSpecs.Repository;
 
-namespace SystemSpecs.Infrastructure
+namespace SystemSpecs.Infrastructure.Repositories.NetworkDevices
 {
     public class NetworkAdaptersRepository : BaseRepository<NetworkAdapter>
     {

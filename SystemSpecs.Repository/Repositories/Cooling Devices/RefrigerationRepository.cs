@@ -1,7 +1,7 @@
 ﻿using System.Management;
 using SystemSpecs.Core.Hardware;
 
-namespace SystemSpecs.Repository
+namespace SystemSpecs.Infrastructure.Repositories.CoolingDevices
 {
     public class RefrigerationRepository : BaseRepository<Refrigeration>
     {
