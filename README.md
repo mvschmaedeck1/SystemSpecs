@@ -4,7 +4,7 @@
 
 1. Add classes:
    * Computer System Hardware Classes:
-      - [ ] Cooling Device Classes 
+      - [X] Cooling Device Classes 
       - [X] Input Device Classes
       - [ ] Mass Storage Classes
       - [ ] Motherboard, Controller, and Port Classes
@@ -42,4 +42,5 @@
 
 ? May not be implemented
 
-2. Add UI
+2. Create repositories to all classes
+3. Create UI
