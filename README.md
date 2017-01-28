@@ -12,7 +12,7 @@
       - [X] Power Classes
       - [ ] Printing Classes
       - [ ] Telephony Classes
-      - [ ] Video and Monitor Classes
+      - [X] Video and Monitor Classes
    * Installed Applications Classes
    * Operating System Classes
       - [ ] COM
