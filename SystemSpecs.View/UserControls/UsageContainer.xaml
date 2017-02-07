@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="SystemSpecs.View.UserControls.UsageContainer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SystemSpecs.View.UserControls"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:enums="clr-namespace:SystemSpecs.Core.Enums;assembly=SystemSpecs.Core"
+             mc:Ignorable="d" 
+             d:DesignWidth="600"
+             x:Name="_self">
+
+    <UserControl.Resources>
+        <iconPacks:PackIconFontAwesome x:Key="icon_other" Kind="Microchip" Width="10" Height="10" />
+        <iconPacks:PackIconModern x:Key="icon_cpu" Kind="HardwareCpu" />
+        <iconPacks:PackIconMaterial x:Key="icon_harddisk" Kind="Harddisk" />
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+    </UserControl.Resources>
+    
+    <StackPanel Margin="2">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{Binding DeviceName, ElementName=_self}" VerticalAlignment="Center" FontSize="14" Grid.Column="0" Margin="5,0" />
+
+            <DockPanel Grid.Column="1" >
+                <iconPacks:PackIconOcticons Kind="Dashboard" DockPanel.Dock="Left" Width="18" VerticalAlignment="Center" />
+
+                <Grid DockPanel.Dock="Right" Margin="5,0" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Label Content="{Binding ResourceUsage}" />
+                        <Label Content=" / " />
+                        <Label Content="{Binding ResourceTotal}" />
+                        <Label Content="{Binding ResourceUnit}" />
+                    </StackPanel>
+
+                    <Label HorizontalAlignment="Right" Padding="0" Content="{Binding ResourcePercentUsage}" ContentStringFormat="{}{0}%" />
+                    <Controls:MetroProgressBar Grid.Row="1" Value="{Binding ResourcePercentUsage, Mode=OneWay}" />
+                </Grid>
+            </DockPanel>
+
+            <Button Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="-1" Margin="3,0" Command="{Binding ExpandCollapseCommand, ElementName=_self}">
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource MetroFlatButton}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsExpanded, ElementName=_self}" Value="False">
+                                <Setter Property="Content" Value="{iconPacks:PackIconModern SectionExpand}" />
+                                <Setter Property="ToolTip" Value="Expand" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding IsExpanded, ElementName=_self}" Value="True">
+                                <Setter Property="Content" Value="{iconPacks:PackIconModern SectionCollapse}" />
+                                <Setter Property="ToolTip" Value="Collapse" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+
+        <Grid Margin="0,5">
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsExpanded, ElementName=_self}" Value="False">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsExpanded, ElementName=_self}" Value="True">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Grid.Style>
+            
+            <DataGrid Background="Transparent" ItemsSource="{Binding MyProperties, ElementName=_self}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Property name" Binding="{Binding Property}" Width="*" />
+                    <DataGridTextColumn Header="Property value" Binding="{Binding Value}" Width="2*" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button Background="Transparent" Foreground="{DynamicResource AccentColorBrush}" VerticalAlignment="Top" HorizontalAlignment="Right" Padding="-1" Margin="5" Content="{iconPacks:PackIconMaterial Filter}" Command="{Binding FilterDisplayedProperties, ElementName=_self}" />
+        </Grid>
+    </StackPanel>
+</UserControl>

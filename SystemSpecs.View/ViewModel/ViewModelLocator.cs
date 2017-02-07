@@ -1,7 +1,7 @@
 /*
   In App.xaml:
   <Application.Resources>
-      <vm:ViewModelLocator xmlns:vm="clr-namespace:SystemSpecs.UI"
+      <vm:ViewModelLocator xmlns:vm="clr-namespace:SystemSpecs.View"
                            x:Key="Locator" />
   </Application.Resources>
   
@@ -16,7 +16,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
 
-namespace SystemSpecs.UI.ViewModel
+namespace SystemSpecs.View.ViewModel
 {
     /// <summary>
     /// This class contains static references to all the view models in the

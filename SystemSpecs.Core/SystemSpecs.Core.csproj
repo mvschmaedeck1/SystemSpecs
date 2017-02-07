@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\CoolingDevicesConfig.cs" />
+    <Compile Include="Config\DisplayedPropertiesConfig.cs" />
     <Compile Include="Config\InputDevicesConfig.cs" />
     <Compile Include="Config\MassStorageDevicesConfig.cs" />
     <Compile Include="Config\NetworkingDevicesConfig.cs" />

@@ -83,11 +83,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Pages\OverviewPage.xaml.cs">
-      <DependentUpon>OverviewPage.xaml</DependentUpon>
+    <Compile Include="UserControls\GenericContainer.xaml.cs">
+      <DependentUpon>GenericContainer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\OverviewContainer.xaml.cs">
-      <DependentUpon>OverviewContainer.xaml</DependentUpon>
+    <Compile Include="UserControls\UsageContainer.xaml.cs">
+      <DependentUpon>UsageContainer.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -103,15 +103,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\OverviewPage.xaml">
+    <Page Include="UserControls\GenericContainer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Style\Styles.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UserControls\OverviewContainer.xaml">
+    <Page Include="UserControls\UsageContainer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,7 +140,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Style\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SystemSpecs.Core\SystemSpecs.Core.csproj">
       <Project>{133f9110-3a96-4343-937c-48ac981330c3}</Project>

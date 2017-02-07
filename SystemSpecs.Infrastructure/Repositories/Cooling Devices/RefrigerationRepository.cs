@@ -1,4 +1,5 @@
-﻿using System.Management;
+﻿using System;
+using System.Management;
 using SystemSpecs.Core.Config;
 using SystemSpecs.Core.Hardware;
 
@@ -21,7 +22,10 @@ namespace SystemSpecs.Infrastructure.Repositories.CoolingDevices
             }
         }
 
-        private RefrigerationRepository() { }
+        private RefrigerationRepository()
+        {
+            LoadUserDisplayedProperties(GetType().Name);
+        }
 
         protected override void InitializeEntities()
         {
@@ -29,6 +33,11 @@ namespace SystemSpecs.Infrastructure.Repositories.CoolingDevices
             {
                 _EntityList.Add(new GenericHardware(obj, CoolingDevicesConfig.RefrigerationPropertyTypes));
             }
+        }
+
+        protected override void InitializaDisplayedProperties()
+        {
+            throw new NotImplementedException();
         }
     }
 }

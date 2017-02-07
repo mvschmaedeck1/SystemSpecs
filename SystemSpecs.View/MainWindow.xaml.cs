@@ -14,8 +14,6 @@ namespace SystemSpecs.View
         {
             ThemeManagerHelper.CreateAppStyleBy(Brushes.Brown.Color, true);
 
-            var v = new NetworkAdaptersRepository();
-
             InitializeComponent();
         }
     }

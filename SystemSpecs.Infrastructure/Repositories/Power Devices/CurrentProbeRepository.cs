@@ -1,4 +1,5 @@
-﻿using System.Management;
+﻿using System;
+using System.Management;
 using SystemSpecs.Core.Config;
 using SystemSpecs.Core.Hardware;
 using SystemSpecs.Infrastructure.Repositories;
@@ -22,7 +23,10 @@ namespace SystemSpecs.Repository.Repositories.PowerDevices
             }
         }
 
-        private CurrentProbeRepository() { }
+        private CurrentProbeRepository()
+        {
+            LoadUserDisplayedProperties(GetType().Name);
+        }
 
         protected override void InitializeEntities()
         {
@@ -30,6 +34,11 @@ namespace SystemSpecs.Repository.Repositories.PowerDevices
             {
                 _EntityList.Add(new GenericHardware(obj, PowerDevicesConfig.CurrentProbePropertyTypes));
             }
+        }
+
+        protected override void InitializaDisplayedProperties()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -5,10 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SystemSpecs.View"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:UserControls="clr-namespace:SystemSpecs.View.UserControls"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525"
         BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1"
-        DataContext="{Binding MainWindow, Source={StaticResource Locator}}">
+        DataContext="{Binding MainWindow, Source={StaticResource Locator}}" 
+        x:Name="self">
 
-    <Controls:MetroTabControl ItemsSource="{Binding TabControlItems}" Margin="10" />
+    <Controls:MetroTabControl Margin="10">
+        <Controls:MetroTabControl.Items>
+            <Controls:MetroTabItem Header="Overview">
+                <UserControls:GenericContainer Title="Network" Icon="{iconPacks:PackIconModern Kind=Network, Width=12, Height=12}" Content="{Binding DataContext.NetworkOverviewContent, ElementName=self}" />
+            </Controls:MetroTabItem>
+        </Controls:MetroTabControl.Items>
+    </Controls:MetroTabControl>
 </Controls:MetroWindow>

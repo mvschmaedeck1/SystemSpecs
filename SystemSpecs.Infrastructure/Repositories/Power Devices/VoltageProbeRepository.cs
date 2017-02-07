@@ -1,4 +1,5 @@
-﻿using System.Management;
+﻿using System;
+using System.Management;
 using SystemSpecs.Core.Config;
 using SystemSpecs.Core.Hardware;
 using SystemSpecs.Infrastructure.Repositories;
@@ -22,7 +23,10 @@ namespace SystemSpecs.Repository.Repositories.Power_Devices
             }
         }
 
-        private VoltageProbeRepository() { }
+        private VoltageProbeRepository()
+        {
+            LoadUserDisplayedProperties(GetType().Name);
+        }
 
         protected override void InitializeEntities()
         {
@@ -30,6 +34,11 @@ namespace SystemSpecs.Repository.Repositories.Power_Devices
             {
                 _EntityList.Add(new GenericHardware(obj, PowerDevicesConfig.VoltageProbeEventPropertyTypes));
             }
+        }
+
+        protected override void InitializaDisplayedProperties()
+        {
+            throw new NotImplementedException();
         }
     }
 }

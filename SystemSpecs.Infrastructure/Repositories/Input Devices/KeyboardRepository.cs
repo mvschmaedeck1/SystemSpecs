@@ -1,4 +1,5 @@
-﻿using System.Management;
+﻿using System;
+using System.Management;
 using SystemSpecs.Core.Config;
 using SystemSpecs.Core.Hardware;
 
@@ -21,7 +22,10 @@ namespace SystemSpecs.Infrastructure.Repositories.InputDevices
             }
         }
 
-        private KeyboardRepository() { }
+        private KeyboardRepository()
+        {
+            LoadUserDisplayedProperties(GetType().Name);
+        }
 
         protected override void InitializeEntities()
         {
@@ -29,6 +33,11 @@ namespace SystemSpecs.Infrastructure.Repositories.InputDevices
             {
                 _EntityList.Add(new GenericHardware(obj, InputDevicesConfig.KeyboardPropertyTypes));
             }
+        }
+
+        protected override void InitializaDisplayedProperties()
+        {
+            throw new NotImplementedException();
         }
     }
 }

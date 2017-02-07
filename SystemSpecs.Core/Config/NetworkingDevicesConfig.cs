@@ -114,33 +114,5 @@ namespace SystemSpecs.Core.Config
             { "WINSScopeID", typeof(string)},
             { "WINSSecondaryServer", typeof(string)},
         };
-
-        public static string[] DefaultDisplayedProperties =
-        {
-            "AdapterType",
-            "Availability",
-            "Caption",
-            "ConfigManagerErrorCode",
-            "ConfigManagerUserConfig",
-            "Description",
-            "DeviceID",
-            "GUID",
-            "Installed",
-            "InterfaceIndex",
-            "MACAdress",
-            "Manufacturer",
-            "MaxNumberControlled",
-            "Name",
-            "NetConnectionID",
-            "NetConnectionStatus",
-            "NetEnabled",
-            "PhysicalAdapter",
-            "PNPDeviceID",
-            "PowerManagementSupported",
-            "ProductName",
-            "ServiceName",
-            "Speed",
-            "SystemCreationClassName"
-        };
     }
 }

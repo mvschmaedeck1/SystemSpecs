@@ -1,4 +1,6 @@
-﻿using System.Management;
+﻿using System;
+using System.Management;
+using SystemSpecs.Core.Config;
 using SystemSpecs.Core.Hardware;
 
 namespace SystemSpecs.Infrastructure.Repositories.NetworkDevices
@@ -20,7 +22,10 @@ namespace SystemSpecs.Infrastructure.Repositories.NetworkDevices
             }
         }
 
-        private NetworkAdaptersRepository() { }
+        private NetworkAdaptersRepository()
+        {
+            LoadUserDisplayedProperties(GetType().Name);
+        }
 
         protected override void InitializeEntities()
         {
@@ -31,6 +36,11 @@ namespace SystemSpecs.Infrastructure.Repositories.NetworkDevices
             {
                 _EntityList.Add(new NetworkAdapter(adapterEnumerator.Current, configurationEnumerator.Current));
             }
+        }
+
+        protected override void InitializaDisplayedProperties()
+        {
+            DefaultDisplayedProperties = DisplayedPropertiesConfig.NetworkAdapterDefaultDisplayedProperties;
         }
     }
 }
