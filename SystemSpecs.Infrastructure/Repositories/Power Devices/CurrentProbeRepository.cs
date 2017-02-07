@@ -5,8 +5,25 @@ using SystemSpecs.Infrastructure.Repositories;
 
 namespace SystemSpecs.Repository.Repositories.PowerDevices
 {
-    public class CurrentProbeRepository : BaseRepository<GenericHardware>
+    public sealed class CurrentProbeRepository : BaseRepository<GenericHardware>
     {
+        private static CurrentProbeRepository _Instance;
+
+        public static CurrentProbeRepository Instance
+        {
+            get
+            {
+                if (_Instance == null)
+                {
+                    _Instance = new CurrentProbeRepository();
+                }
+
+                return _Instance;
+            }
+        }
+
+        private CurrentProbeRepository() { }
+
         protected override void InitializeEntities()
         {
             foreach (var obj in new ManagementObjectSearcher(new SelectQuery("Win32_CurrentProbe")).Get())

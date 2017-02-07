@@ -4,8 +4,25 @@ using SystemSpecs.Core.Hardware;
 
 namespace SystemSpecs.Infrastructure.Repositories.InputDevices
 {
-    public class PointingDeviceRepository : BaseRepository<GenericHardware>
+    public sealed class PointingDeviceRepository : BaseRepository<GenericHardware>
     {
+        private static PointingDeviceRepository _Instance;
+
+        public static PointingDeviceRepository Instance
+        {
+            get
+            {
+                if (_Instance == null)
+                {
+                    _Instance = new PointingDeviceRepository();
+                }
+
+                return _Instance;
+            }
+        }
+
+        private PointingDeviceRepository() { }
+
         protected override void InitializeEntities()
         {
             foreach (var obj in new ManagementObjectSearcher(new SelectQuery("Win32_PointingDevice")).Get())

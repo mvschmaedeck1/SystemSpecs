@@ -4,8 +4,25 @@ using SystemSpecs.Core.Hardware;
 
 namespace SystemSpecs.Infrastructure.Repositories.InputDevices
 {
-    public class KeyboardRepository : BaseRepository<GenericHardware>
+    public sealed class KeyboardRepository : BaseRepository<GenericHardware>
     {
+        private static KeyboardRepository _Instance;
+
+        public static KeyboardRepository Instance
+        {
+            get
+            {
+                if (_Instance == null)
+                {
+                    _Instance = new KeyboardRepository();
+                }
+
+                return _Instance;
+            }
+        }
+
+        private KeyboardRepository() { }
+
         protected override void InitializeEntities()
         {
             foreach(var obj in new ManagementObjectSearcher(new SelectQuery("Win32_Keyboard")).Get())

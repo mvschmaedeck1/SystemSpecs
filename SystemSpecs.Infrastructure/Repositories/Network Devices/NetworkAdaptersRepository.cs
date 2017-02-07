@@ -3,8 +3,25 @@ using SystemSpecs.Core.Hardware;
 
 namespace SystemSpecs.Infrastructure.Repositories.NetworkDevices
 {
-    public class NetworkAdaptersRepository : BaseRepository<NetworkAdapter>
+    public sealed class NetworkAdaptersRepository : BaseRepository<NetworkAdapter>
     {
+        private static NetworkAdaptersRepository _Instance;
+
+        public static NetworkAdaptersRepository Instance
+        {
+            get
+            {
+                if (_Instance == null)
+                {
+                    _Instance = new NetworkAdaptersRepository();
+                }
+
+                return _Instance;
+            }
+        }
+
+        private NetworkAdaptersRepository() { }
+
         protected override void InitializeEntities()
         {
             var adapterEnumerator = new ManagementObjectSearcher(new SelectQuery("Win32_NetworkAdapter")).Get().GetEnumerator();

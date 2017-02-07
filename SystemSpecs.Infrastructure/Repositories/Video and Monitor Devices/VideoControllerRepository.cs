@@ -5,8 +5,25 @@ using SystemSpecs.Infrastructure.Repositories;
 
 namespace SystemSpecs.Repository.Repositories.VideoAndMonitorDevices
 {
-    public class VideoControllerRepository : BaseRepository<GenericHardware>
+    public sealed class VideoControllerRepository : BaseRepository<GenericHardware>
     {
+        private static VideoControllerRepository _Instance;
+
+        public static VideoControllerRepository Instance
+        {
+            get
+            {
+                if(_Instance == null)
+                {
+                    _Instance = new VideoControllerRepository();
+                }
+
+                return _Instance;
+            }
+        }
+
+        private VideoControllerRepository() { }
+
         protected override void InitializeEntities()
         {
             foreach (var obj in new ManagementObjectSearcher(new SelectQuery("Win32_VideoController")).Get())

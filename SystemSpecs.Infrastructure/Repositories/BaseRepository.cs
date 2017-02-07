@@ -8,7 +8,10 @@ namespace SystemSpecs.Infrastructure.Repositories
     {
         protected List<T> _EntityList;
 
-        public BaseRepository()
+        public static IEnumerable<string> DefaultDisplayedProperties { get; private set; }
+        public static IEnumerable<string> UserDisplayedProperties { get; private set; }
+
+        protected BaseRepository()
         {
             _EntityList = new List<T>();
 
