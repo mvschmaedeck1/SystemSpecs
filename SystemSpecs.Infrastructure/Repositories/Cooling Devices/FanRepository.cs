@@ -24,7 +24,7 @@ namespace SystemSpecs.Infrastructure.Repositories.CoolingDevices
 
         private FanRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

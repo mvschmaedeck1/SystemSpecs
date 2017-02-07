@@ -25,7 +25,7 @@ namespace SystemSpecs.Repository.Repositories.VideoAndMonitorDevices
 
         private VideoControllerRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

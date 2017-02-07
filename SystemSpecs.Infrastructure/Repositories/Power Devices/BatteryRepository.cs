@@ -25,7 +25,7 @@ namespace SystemSpecs.Repository.Repositories.PowerDevices
 
         private BatteryRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

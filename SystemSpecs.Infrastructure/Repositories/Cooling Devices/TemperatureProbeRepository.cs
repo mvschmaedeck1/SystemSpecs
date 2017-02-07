@@ -24,7 +24,7 @@ namespace SystemSpecs.Infrastructure.Repositories.CoolingDevices
 
         private TemperatureProbeRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

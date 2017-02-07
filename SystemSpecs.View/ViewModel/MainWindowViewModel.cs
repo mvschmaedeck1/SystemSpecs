@@ -21,7 +21,7 @@ namespace SystemSpecs.View.ViewModel
                 x.Children.Add(new UsageContainer(adapter) { DeviceName = adapter.GetProperty("Description").ToString() });
             }
 
-            NetworkOverviewContent = x;
+            //NetworkOverviewContent = x;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace SystemSpecs.Infrastructure.Repositories.CoolingDevices
 
         private HeatPipeRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

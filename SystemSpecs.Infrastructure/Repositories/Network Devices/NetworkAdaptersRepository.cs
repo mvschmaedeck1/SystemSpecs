@@ -24,7 +24,7 @@ namespace SystemSpecs.Infrastructure.Repositories.NetworkDevices
 
         private NetworkAdaptersRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

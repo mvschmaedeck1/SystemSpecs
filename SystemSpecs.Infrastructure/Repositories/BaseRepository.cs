@@ -18,7 +18,10 @@ namespace SystemSpecs.Infrastructure.Repositories
         {
             _EntityList = new List<T>();
 
-            InitializeEntities();
+            InitializaDisplayedProperties();
+            LoadUserDisplayedProperties(GetType().Name);
+
+            InitializeEntities();            
         }
 
         protected abstract void InitializeEntities();

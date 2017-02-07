@@ -25,7 +25,7 @@ namespace SystemSpecs.Repository.Repositories.PowerDevices
 
         private CurrentProbeRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

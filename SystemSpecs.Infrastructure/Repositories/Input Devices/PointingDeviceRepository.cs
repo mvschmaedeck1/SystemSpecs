@@ -24,7 +24,7 @@ namespace SystemSpecs.Infrastructure.Repositories.InputDevices
 
         private PointingDeviceRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

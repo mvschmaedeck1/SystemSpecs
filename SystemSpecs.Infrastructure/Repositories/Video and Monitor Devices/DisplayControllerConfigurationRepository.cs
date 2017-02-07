@@ -25,7 +25,7 @@ namespace SystemSpecs.Repository.Repositories.VideoAndMonitorDevices
 
         private DisplayControllerConfigurationRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()

@@ -25,7 +25,7 @@ namespace SystemSpecs.Repository.Repositories.Power_Devices
 
         private VoltageProbeRepository()
         {
-            LoadUserDisplayedProperties(GetType().Name);
+            
         }
 
         protected override void InitializeEntities()
